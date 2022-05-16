@@ -148,19 +148,9 @@ body::before{
     }
     .ordersumary_control{
         padding: 7px 5px;
-        text-align: center;
         
     }
-    .ordersumary_plan{
-       display: block;
-       
-    }
-    .plan_box2{
-        text-align: right;
-    }
-    .link_payment{
-        font-size: 0.8rem;
-        padding: 5px;
-        margin: 5px 0;
+    .link_payment{   
+        margin: 10px 0;
     }
 }
