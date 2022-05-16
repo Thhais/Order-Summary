@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--pale-blue);
+}
+p{
+    color: var(--desaturated-blue);
+}
+body::before{
+    content: " ";
+    position: fixed;
+    left: 0;
+    top: -150px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+}
+
+.container{  
+    width: 350px;
+    border-radius: 10px;
+    background-color: var(--very-pale-blue);
+    box-shadow: 5px 20px 20px hsla(224, 23%, 55%, 0.218);
+}
+
+.ordersumary_img img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.ordersumary_control{
+    padding: 20px 30px;
+    text-align: center;
+    
+}
+
+
+.ordersumary_title{
+    font-size: 1.3rem;
+    font-weight: 900;
+    color:  var(--dark-blue);
+    margin-bottom: 10px;
+}
+.ordersumary_subtitle{
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.ordersumary_plan{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsla(225, 100%, 94%, 0.355);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.plan_box{
+    display: flex;
+    align-items: center;
+}
+.icon_music{
+    margin-right: 15px;
+}
+.plan_title{
+    color:  var(--dark-blue);
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+.plan_price{
+    display: block;
+    font-weight: 100;
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+}
+.link_plan_box{
+    font-weight: 700;
+    color: var(--bright-blue);
+    font-size: 0.8rem;
+    opacity: 1;
+    
+}
+.link_plan_box:hover{
+   text-decoration: none;
+   opacity: 0.6;
+}
+
+.link_payment{
+    display: block;
+    text-decoration: none;
+    color: var(--pale-blue);
+    font-weight: 700;
+    background-color: var(--bright-blue);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin: 25px 0;
+    box-shadow: -1px 20px 10px var(--pale-blue);
+    opacity: 1;
+    transition: 0.2s linear;
+}
+
+.link_payment:hover{
+    opacity: 0.6;
+}
+
+.link_cancel{
+    width: 100%;
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.link_cancel:hover{
+    color: var(--dark-blue);
+}
+
+
+/* ############################################ MEDIA QUERIES ############################### */
+/* MOBILE */
+@media screen and (max-width: 375px){
+    body::before{
+        background-image: url(./images/pattern-background-mobile.svg);
+        top: 0;
+    }
+    .container{
+        width: 300px;
+    }
+    .ordersumary_control{
+        padding: 7px 5px;
+        text-align: center;
+        
+    }
+    .ordersumary_plan{
+       display: block;
+       
+    }
+    .plan_box2{
+        text-align: right;
+    }
+    .link_payment{
+        font-size: 0.8rem;
+        padding: 5px;
+        margin: 5px 0;
+    }
+}
